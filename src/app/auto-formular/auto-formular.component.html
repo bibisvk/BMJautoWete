@@ -1,0 +1,49 @@
+<h1>Auto formulár</h1>
+
+<form [formGroup]="form">
+  <label>Cena:
+    <input formControlName="cena">
+  </label>
+  <br>
+
+  <label>Dvere:
+    <input formControlName="dvere">
+  </label>
+  <br>
+
+  <label>Osoby:
+    <input formControlName="osoby">
+  </label>
+  <br>
+
+  <label>Kufor:
+    <input formControlName="kufor">
+  </label>
+  <br>
+
+  <label>Bezpečnosť:
+    <input formControlName="bezpecnost">
+  </label>
+  <br>
+
+  <label>TK:
+    <input formControlName="TK">
+  </label>
+  <br>
+
+  <label>EK:
+    <input formControlName="EK">
+  </label>
+  <br>
+
+  <label>PZP:
+    <input formControlName="PZP">
+  </label>
+  <br>
+
+
+  <button (click)="pridaj()" *ngIf="form.value.id === null">pridaj</button>
+  <button (click)="uprav()" *ngIf="form.value.id !== null">uprav</button>
+  <button (click)="zrus()">zrus</button>
+
+</form>

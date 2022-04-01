@@ -1,0 +1,16 @@
+<h1>Auta</h1>
+
+<app-auto-formular [auto]="autoNaUpravu!"
+                    (pridajAuto)="pridaj($event)"
+                    (upravAuto)="uprav($event)">
+</app-auto-formular>
+
+<app-auta-zoznam [auta]="auta"
+                  (upravAuto)="upravZoZoznamu($event)"
+                  (zmazAuto)="zmazZoZoznamu($event)">
+
+</app-auta-zoznam>
+
+<div>
+  <button (click)="chodSpat()">SPÄŤ</button>
+</div>
