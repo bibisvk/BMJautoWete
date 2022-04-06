@@ -1,21 +1,31 @@
-<app-auta-zoznam class="float-right" [auta]="auta"
-                 (upravAuto)="upravZoZoznamu($event)"
-                 (zmazAuto)="zmazZoZoznamu($event)">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="col">
+        <h1><button type = "button" class="btn-danger btn-lg shadow rounded font-weight-bold">AUTÁ</button></h1>
+      </div>
+      <app-auto-formular  [auto]="autoNaUpravu!"
+                      (pridajAuto)="pridaj($event)"
+                      (upravAuto)="uprav($event)">
+      </app-auto-formular>
+      <div class="fixed-bottom ml-3 mb-3 ">
+      <button type="button" class="btn-danger btn-lg shadow rounded font-weight-bold mr-3" (click)="chodSpat()">SPÄŤ</button>
+      </div>
+    </div>
+  <div class="col-9">
+    <app-auta-zoznam [auta]="auta"
+                     (upravAuto)="upravZoZoznamu($event)"
+                     (zmazAuto)="zmazZoZoznamu($event)">
 
-</app-auta-zoznam>
-
-<div class="col-1 mt-xl-3">
-  <h1><button type = "button" class="btn-danger rounded btn-lg btn-block shadow rounded font-weight-bold">AUTÁ</button></h1>
+    </app-auta-zoznam>
+  </div>
 </div>
 
 
-<app-auto-formular class="position-absolute top-0 start-0" [auto]="autoNaUpravu!"
-                    (pridajAuto)="pridaj($event)"
-                    (upravAuto)="uprav($event)">
-</app-auto-formular>
 
 
 
-<div class="fixed-bottom col-1 mb-3 ">
-  <button type="button" class="btn-danger rounded btn-lg shadow rounded font-weight-bold mr-3" (click)="chodSpat()">SPÄŤ</button>
+
+
+
 </div>
