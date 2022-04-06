@@ -8,9 +8,7 @@
                       (pridajAuto)="pridaj($event)"
                       (upravAuto)="uprav($event)">
       </app-auto-formular>
-      <div class="fixed-bottom ml-3 mb-3 ">
-      <button type="button" class="btn-danger btn-lg shadow rounded font-weight-bold mr-3" (click)="chodSpat()">SPÄŤ</button>
-      </div>
+
     </div>
   <div class="col-9">
     <app-auta-zoznam [auta]="auta"
@@ -20,12 +18,9 @@
     </app-auta-zoznam>
   </div>
 </div>
-
-
-
-
-
-
-
-
+</div>
+<div class="container fixed-bottom">
+<div class="col mb-1">
+  <button type="button" class="btn-danger btn-lg shadow rounded font-weight-bold mt-auto" (click)="chodSpat()">SPÄŤ</button>
+</div>
 </div>

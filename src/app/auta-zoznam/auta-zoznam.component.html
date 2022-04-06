@@ -26,8 +26,8 @@
     <td>{{ auto.lug_boot }}</td>
     <td>{{ auto.safety }}</td>
     <td>
-      <button (click)="uprav(auto.id!)">Upraviť</button>
-      <button (click)="zmaz(auto.id!)">Zmazať</button>
+      <button type = "button" class="btn-danger rounded btn-md shadow rounded font-weight-bold mr-2" (click)="uprav(auto.id!)">UPRAVIŤ</button>
+      <button type = "button" class="btn-danger rounded btn-md shadow rounded font-weight-bold" (click)="zmaz(auto.id!)">ZMAZAŤ</button>
     </td>
   </tr>
   </tbody>
