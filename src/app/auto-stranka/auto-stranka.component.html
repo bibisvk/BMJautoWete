@@ -19,6 +19,10 @@
   </div>
 </div>
 </div>
+<app-auta-kontrola [auta]="auta"
+                   (upravAuto)="upravZoZoznamu($event)">
+
+</app-auta-kontrola>
 <div class="container fixed-bottom">
 <div class="col mb-1">
   <button type="button" class="btn-danger btn-lg shadow rounded font-weight-bold mt-auto" (click)="chodSpat()">SPÄŤ</button>

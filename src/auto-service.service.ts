@@ -32,4 +32,8 @@ export class AutoServiceService {
   deleteAuto(autoId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${autoId}`);
   }
+
+  getKontrolaAut(): Observable<AutoZoznam[]> {
+    return this.http.get<AutoZoznam[]>(`${this.apiUrl}/check`);
+  }
 }

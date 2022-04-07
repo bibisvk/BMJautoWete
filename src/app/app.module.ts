@@ -10,6 +10,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpClientModule} from "@angular/common/http";
+import { AutaKontrolaComponent } from './auta-kontrola/auta-kontrola.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {HttpClientModule} from "@angular/common/http";
     AutoFormularComponent,
     AutoStrankaComponent,
     AutaZoznamComponent,
-    MenuComponent
+    MenuComponent,
+    AutaKontrolaComponent
   ],
   imports: [
     BrowserModule,
