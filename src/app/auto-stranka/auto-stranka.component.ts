@@ -13,6 +13,9 @@ export class AutoStrankaComponent implements OnInit {
 
   autoNaUpravu?: Auto;
 
+  visibilityzoznam:boolean=false;
+  visibilitykontrola:boolean=true;
+
   constructor(private router: Router, private autoService: AutoServiceService) { }
 
   ngOnInit(): void {
@@ -56,6 +59,15 @@ export class AutoStrankaComponent implements OnInit {
     this.autoService.deleteAuto(autoId).subscribe(data => {
       this.refreshAut();
     });
+  }
+
+  viditelnostkontrola(): void{
+      this.visibilitykontrola=true;
+      this.visibilityzoznam=false;
+  }
+  viditelnostzoznam(): void{
+    this.visibilitykontrola=false;
+    this.visibilityzoznam=true;
   }
 
 }

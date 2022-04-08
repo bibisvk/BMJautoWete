@@ -1,6 +1,6 @@
-<div class="col-1" xmlns:orderBy="http://www.w3.org/1999/xhtml" xmlns:orderBy="http://www.w3.org/1999/xhtml"
-     xmlns:orderBy="http://www.w3.org/1999/xhtml">
-  <h1><button type = "button" class="btn-danger rounded btn-lg shadow rounded font-weight-bold">KONTROLA</button></h1>
+<div class="col">
+  <h1><button type = "button" class="btn-danger btn-lg shadow rounded font-weight-bold mr-3">ZOZNAM</button>
+  <button type = "button" class="btn-danger btn-lg shadow rounded font-weight-bold">KONTROLA</button></h1>
 </div>
 <div class="mx-3">
   <div *ngIf="!auta || auta?.length === 0">
@@ -24,10 +24,11 @@
       <td>{{ auto.EKEndDate }}</td>
       <td>{{ auto.PZPEndDate }}</td>
       <td>
-        <button type = "button" class="btn-danger rounded btn-md shadow rounded font-weight-bold mr-2" (click)="uprav(auto.id!)">UPRAVIŤ</button>
+        <button type = "button" class="btn-danger btn-md shadow rounded font-weight-bold mr-4" (click)="uprav(auto.id!)">UPRAVIŤ</button>
       </td>
     </tr>
     </tbody>
   </table>
 
 </div>
+
