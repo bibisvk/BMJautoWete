@@ -11,12 +11,16 @@
 
     </div>
   <div class="col-9">
-    <app-auta-zoznam class="position-fixed w-50 " [hidden]="visibilityzoznam" (click)="viditelnostzoznam()" [auta]="auta"
+    <div class="col">
+      <h1><button type = "button" class="btn-danger btn-lg shadow rounded font-weight-bold mr-3" (click)="viditelnostzoznam()">ZOZNAM</button>
+        <button type = "button" class="btn-danger btn-lg shadow rounded font-weight-bold" (click)="viditelnostkontrola()">KONTROLA</button></h1>
+    </div>
+    <app-auta-zoznam class="position-fixed w-50 " [hidden]="visibilityzoznam"  [auta]="auta"
                      (upravAuto)="upravZoZoznamu($event)"
                      (zmazAuto)="zmazZoZoznamu($event)">
 
     </app-auta-zoznam>
-    <app-auta-kontrola class="position-fixed w-50 " [hidden]="visibilitykontrola" (click)="viditelnostkontrola()" [auta]="auta"
+    <app-auta-kontrola class="position-fixed w-50 " [hidden]="visibilitykontrola"  [auta]="auta"
                        (upravAuto)="upravZoZoznamu($event)">
 
     </app-auta-kontrola>
