@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {Auto, AutoZoznam} from "../models/auto.model";
-import {AutoServiceService} from "../../auto-service.service";
+import {AutoServiceService} from "../../Services/auto-service.service";
 
 @Component({
   selector: 'app-auto-stranka',
