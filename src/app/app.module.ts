@@ -11,6 +11,9 @@ import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpClientModule} from "@angular/common/http";
 import { AutaKontrolaComponent } from './auta-kontrola/auta-kontrola.component';
+import { CustomersFormularComponent } from './customers-formular/customers-formular.component';
+import { CustomersZoznamComponent } from './customers-zoznam/customers-zoznam.component';
+import { CustomersStrankaComponent } from './customers-stranka/customers-stranka.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { AutaKontrolaComponent } from './auta-kontrola/auta-kontrola.component';
     AutoStrankaComponent,
     AutaZoznamComponent,
     MenuComponent,
-    AutaKontrolaComponent
+    AutaKontrolaComponent,
+    CustomersFormularComponent,
+    CustomersZoznamComponent,
+    CustomersStrankaComponent
   ],
   imports: [
     BrowserModule,
