@@ -23,8 +23,8 @@ export class BorrowingZoznamComponent {
     this.upravBorrowing.emit(borrowingId);
   }
 
-  zmaz(borrowingsId: number): void {
-    this.zmazBorrowing.emit(borrowingsId);
+  zmaz(borrowingId: number): void {
+    this.zmazBorrowing.emit(borrowingId);
   }
 
 }

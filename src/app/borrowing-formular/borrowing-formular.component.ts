@@ -27,21 +27,21 @@ export class BorrowingFormularComponent{
 
   constructor() {
     this.form = new FormGroup({
-      borrowing_id: new FormControl(null),
-      car_number: new FormControl(null),
-      customer_number: new FormControl(null),
-      start_date: new FormControl(null),
-      end_date: new FormControl(null),
+      borrowingId: new FormControl(null),
+      carId: new FormControl(null),
+      customerId: new FormControl(null),
+      borrowingStartDate: new FormControl(null),
+      borrowingEndDate: new FormControl(null),
 
     });
   }
 
   private naplnForm(borrowing: Borrowing): void {
-    this.form.controls['borrowing_id'].setValue(borrowing.borrowing_id);
-    this.form.controls["car_number"].setValue(borrowing.car_number);
-    this.form.controls["customer_number"].setValue(borrowing.customer_number);
-    this.form.controls["start_date"].setValue(borrowing.start_date);
-    this.form.controls["end_date"].setValue(borrowing.end_date);
+    this.form.controls['borrowingId'].setValue(borrowing.borrowingId);
+    this.form.controls["carId"].setValue(borrowing.carId);
+    this.form.controls["customerId"].setValue(borrowing.customerId);
+    this.form.controls["borrowingStartDate"].setValue(borrowing.borrowingStartDate);
+    this.form.controls["borrowingEndDate"].setValue(borrowing.borrowingEndDate);
 
   }
 

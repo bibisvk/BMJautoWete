@@ -50,8 +50,8 @@ export class BorrowingStrankaComponent implements OnInit {
     });
   }
   uprav(borrowing: Borrowing): void {
-    if (borrowing.borrowing_id !== undefined) {
-      this.borrowingService.updateBorrowing(borrowing.borrowing_id, borrowing).subscribe(data => {
+    if (borrowing.borrowingId !== undefined) {
+      this.borrowingService.updateBorrowing(borrowing.borrowingId, borrowing).subscribe(data => {
         console.log('prislo:', data);
         this.refreshBorrowings();
       });

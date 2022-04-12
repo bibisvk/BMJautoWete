@@ -20,13 +20,13 @@ export class BorrowingServiceService {
   }
 
   updateBorrowing(borrowingId: number, borrowing: Borrowing): Observable<Borrowing> {
-    return this.http.put<Borrowing>(`${this.apiUrl}/${borrowingId}`, {borrowingId: borrowing.borrowing_id, carId: borrowing.car_number, customerId: borrowing.customer_number, borrowingStartDate: borrowing.start_date,
-      borrowingEndDate: borrowing.end_date});
+    return this.http.put<Borrowing>(`${this.apiUrl}/${borrowingId}`, {borrowingId: borrowing.borrowingId, carId: borrowing.carId, customerId: borrowing.customerId, borrowingStartDate: borrowing.borrowingStartDate,
+      borrowingEndDate: borrowing.borrowingEndDate});
   }
 
   createBorrowing(borrowing: Borrowing): Observable<Borrowing> {
-    return this.http.post<Borrowing>(`${this.apiUrl}`, {borrowingId: borrowing.borrowing_id, carId: borrowing.car_number, customerId: borrowing.customer_number, borrowingStartDate: borrowing.start_date,
-      borrowingEndDate: borrowing.end_date});
+    return this.http.post<Borrowing>(`${this.apiUrl}`, {borrowingId: borrowing.borrowingId, carId: borrowing.carId, customerId: borrowing.customerId, borrowingStartDate: borrowing.borrowingStartDate,
+      borrowingEndDate: borrowing.borrowingEndDate});
   }
 
   deleteBorrowing(borrowingId: number): Observable<void> {
