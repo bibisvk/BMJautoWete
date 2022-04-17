@@ -1,3 +1,6 @@
+<div class="form-group mx-3">
+  <input type="text" class="form-control" placeholder="Vyhladavanie..." [(ngModel)]="term">
+</div>
 
 <div class="mx-3">
   <div *ngIf="!auta || auta?.length === 0">
@@ -15,7 +18,7 @@
     </thead>
 
     <tbody>
-    <tr *ngFor="let auto of auta">
+    <tr *ngFor="let auto of auta | filter:term">
       <td>{{ auto.id }}</td>
       <td>{{ auto.TKEndDate }}</td>
       <td>{{ auto.EKEndDate }}</td>

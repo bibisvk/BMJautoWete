@@ -20,13 +20,13 @@ export class AutoServiceService {
   }
 
   updateAuto(autoId: number, auto: Auto): Observable<Auto> {
-    return this.http.put<Auto>(`${this.apiUrl}/${autoId}`, {id: auto.id, price: auto.cena, doors: auto.dvere, persons: auto.osoby,
-      EKEndDate: auto.EK, safety: auto.bezpecnost, lug_boot: auto.kufor, PZPEndDate: auto.PZP, TKEndDate: auto.TK});
+    return this.http.put<Auto>(`${this.apiUrl}/${autoId}`, {id: auto.id, price: auto.price, doors: auto.doors, persons: auto.persons,
+      EKEndDate: auto.EKEndDate, safety: auto.safety, lug_boot: auto.lug_boot, PZPEndDate: auto.PZPEndDate, TKEndDate: auto.TKEndDate});
   }
 
   createAuto(auto: Auto): Observable<Auto> {
-    return this.http.post<Auto>(`${this.apiUrl}`, {id: auto.id, price: auto.cena, doors: auto.dvere, persons: auto.osoby,
-      EKEndDate: auto.EK, safety: auto.bezpecnost, lug_boot: auto.kufor, PZPEndDate: auto.PZP, TKEndDate: auto.TK});
+    return this.http.post<Auto>(`${this.apiUrl}`, {id: auto.id, price: auto.price, doors: auto.doors, persons: auto.persons,
+      EKEndDate: auto.EKEndDate, safety: auto.safety, lug_boot: auto.lug_boot, PZPEndDate: auto.PZPEndDate, TKEndDate: auto.TKEndDate});
   }
 
   deleteAuto(autoId: number): Observable<void> {

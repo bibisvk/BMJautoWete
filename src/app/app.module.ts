@@ -17,6 +17,7 @@ import { CustomersFormularComponent } from './customers-formular/customers-formu
 import { BorrowingFormularComponent } from './borrowing-formular/borrowing-formular.component';
 import { BorrowingStrankaComponent } from './borrowing-stranka/borrowing-stranka.component';
 import { BorrowingZoznamComponent } from './borrowing-zoznam/borrowing-zoznam.component';
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { BorrowingZoznamComponent } from './borrowing-zoznam/borrowing-zoznam.co
     ReactiveFormsModule,
     RouterModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

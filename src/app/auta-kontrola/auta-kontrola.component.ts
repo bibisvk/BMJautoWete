@@ -8,6 +8,8 @@ import {AutoZoznam} from "../models/auto.model";
 })
 export class AutaKontrolaComponent{
 
+  term!: string;
+
   @Input()
   auta: AutoZoznam[] = [];
 

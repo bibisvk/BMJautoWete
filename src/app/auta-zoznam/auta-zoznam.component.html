@@ -1,3 +1,6 @@
+<div class="form-group mx-3">
+  <input type="text" class="form-control" placeholder="Vyhladavanie..." [(ngModel)]="term">
+</div>
 
 <div class="mx-3">
 <div *ngIf="!auta || auta?.length === 0">
@@ -7,17 +10,18 @@
 <table class="table table-hover" *ngIf="auta.length > 0">
   <thead>
   <tr>
+    <th>ID</th>
     <th>Cena</th>
     <th>Dvere</th>
     <th>Osoby</th>
     <th>Kufor</th>
     <th>Bezpečnosť</th>
-    <th></th>
   </tr>
   </thead>
 
   <tbody>
-  <tr *ngFor="let auto of auta">
+  <tr *ngFor="let auto of auta | filter:term">
+    <td>{{ auto.id }}</td>
     <td>{{ auto.price }}</td>
     <td>{{ auto.doors }}</td>
     <td>{{ auto.persons }}</td>
