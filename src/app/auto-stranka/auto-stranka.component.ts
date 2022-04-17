@@ -70,4 +70,5 @@ export class AutoStrankaComponent implements OnInit {
     this.visibilityzoznam=true;
   }
 
+
 }
