@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {BorrowingZoznam} from "../models/borrowing.model";
 
 @Component({
@@ -8,6 +8,7 @@ import {BorrowingZoznam} from "../models/borrowing.model";
 })
 export class BorrowingZoznamComponent {
 
+  term!: string;
 
   @Input()
   borrowings: BorrowingZoznam[] = [];
