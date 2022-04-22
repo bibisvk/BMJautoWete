@@ -36,4 +36,9 @@ export class AutoServiceService {
   getKontrolaAut(): Observable<AutoZoznam[]> {
     return this.http.get<AutoZoznam[]>(`${this.apiUrl}/check`);
   }
+
+  exportAuto(): Observable<Blob>{
+    return this.http.get(`${this.apiUrl}/pdf`,{responseType:'blob'});
+  }
+
 }
