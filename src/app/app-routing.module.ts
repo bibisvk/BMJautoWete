@@ -4,6 +4,7 @@ import {NgModule} from "@angular/core";
 import {AutoStrankaComponent} from "./auto-stranka/auto-stranka.component";
 import {CustomersStrankaComponent} from "./customers-stranka/customers-stranka.component";
 import {BorrowingStrankaComponent} from "./borrowing-stranka/borrowing-stranka.component";
+import {AuthGuard} from "./utility/app.guard";
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: MenuComponent
+    component: MenuComponent,
+    canActivate: [AuthGuard]
   }
 ]
 
