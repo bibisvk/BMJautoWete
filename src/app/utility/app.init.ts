@@ -11,6 +11,7 @@ export function initializeKeycloak(keycloak: KeycloakService){
       initOptions: {
         onLoad: "login-required",
         flow: "standard"
-      }
+      },
+      loadUserProfileAtStartUp: true
     });
 }

@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 
-enum MENU { OSOBY, AUTA, VYPOZICKY }
+enum MENU { OSOBY, AUTA, VYPOZICKY, LOGOUT}
 
 @Component({
   selector: 'app-menu',
@@ -24,6 +24,9 @@ export class MenuComponent {
     if (m === MENU.VYPOZICKY) {
       this.router.navigate(['/borrowing']);
     }
+    if (m === MENU.LOGOUT) {
+      this.router.navigate(['/logout']);
+    }
   }
-
 }
+

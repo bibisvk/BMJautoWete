@@ -20,6 +20,7 @@ import { BorrowingZoznamComponent } from './borrowing-zoznam/borrowing-zoznam.co
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
 import {initializeKeycloak} from './utility/app.init';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {initializeKeycloak} from './utility/app.init';
 
     BorrowingFormularComponent,
     BorrowingStrankaComponent,
-    BorrowingZoznamComponent
+    BorrowingZoznamComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
