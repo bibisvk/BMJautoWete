@@ -16,7 +16,11 @@ import { CustomersStrankaComponent } from './customers-stranka/customers-stranka
 import { CustomersFormularComponent } from './customers-formular/customers-formular.component';
 import { BorrowingFormularComponent } from './borrowing-formular/borrowing-formular.component';
 import { BorrowingStrankaComponent } from './borrowing-stranka/borrowing-stranka.component';
-import { BorrowingZoznamComponent } from './borrowing-zoznam/borrowing-zoznam.component';
+import {
+  BorrowingZoznamComponent,
+  FilterCar,
+  FilterCustomer,
+} from './borrowing-zoznam/borrowing-zoznam.component';
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
 import {initializeKeycloak} from './utility/app.init';
@@ -39,7 +43,11 @@ import { LogoutComponent } from './logout/logout.component';
     BorrowingFormularComponent,
     BorrowingStrankaComponent,
     BorrowingZoznamComponent,
-    LogoutComponent
+
+    LogoutComponent,
+
+    FilterCar,
+    FilterCustomer
   ],
   imports: [
     BrowserModule,

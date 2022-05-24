@@ -2,6 +2,13 @@
   <input type="text" class="form-control" placeholder="Vyhladavanie..." [(ngModel)]="term">
 </div>
 
+<tfoot>
+<tr>
+  <th><input type="text" class="form-control" [(ngModel)]="filterCar"  placeholder="carId" /></th>
+  <th><input type="text" class="form-control" [(ngModel)]="filterCustomer" placeholder="customerId" /></th>
+</tr>
+</tfoot>
+
 <div class="mx-3">
   <div *ngIf="!borrowings || borrowings?.length === 0">
     Zoznam vypoziciek je prázdny.
@@ -10,16 +17,16 @@
   <table class="table table-hover" *ngIf="borrowings.length > 0">
     <thead>
     <tr>
-      <th>Číslo zákazníka</th>
       <th>Číslo auta</th>
+      <th>Číslo zákazníka</th>
       <th>Začiatok výpožičky</th>
       <th>Koniec výpožičky</th>
       <th></th>
     </tr>
     </thead>
 
-    <tbody>
-    <tr *ngFor="let borrowing of borrowings | filter:term">
+    <tbody  *ngIf="!filterCar && !filterCustomer">
+    <tr *ngFor="let borrowing of borrowings | filter:term ">
       <td>{{ borrowing.carId }}</td>
       <td>{{ borrowing.customerId }}</td>
       <td>{{ borrowing.borrowingStartDate }}</td>
@@ -30,6 +37,33 @@
       </td>
     </tr>
     </tbody>
+
+    <tbody *ngIf="filterCar != ''">
+    <tr *ngFor="let borrowing of borrowings | filterCar:filterCar ">
+      <td>{{ borrowing.carId }}</td>
+      <td>{{ borrowing.customerId }}</td>
+      <td>{{ borrowing.borrowingStartDate }}</td>
+      <td>{{ borrowing.borrowingEndDate }}</td>
+      <td>
+        <button type = "button" class="btn-danger rounded btn-md shadow rounded font-weight-bold mr-2" (click)="uprav(borrowing.borrowingId!)">UPRAVIŤ</button>
+        <button type = "button" class="btn-danger rounded btn-md shadow rounded font-weight-bold" (click)="zmaz(borrowing.borrowingId!)">ZMAZAŤ</button>
+      </td>
+    </tr>
+    </tbody>
+
+    <tbody *ngIf="filterCustomer != ''">
+    <tr *ngFor="let borrowing of borrowings | filterCustomer:filterCustomer ">
+      <td>{{ borrowing.carId }}</td>
+      <td>{{ borrowing.customerId }}</td>
+      <td>{{ borrowing.borrowingStartDate }}</td>
+      <td>{{ borrowing.borrowingEndDate }}</td>
+      <td>
+        <button type = "button" class="btn-danger rounded btn-md shadow rounded font-weight-bold mr-2" (click)="uprav(borrowing.borrowingId!)">UPRAVIŤ</button>
+        <button type = "button" class="btn-danger rounded btn-md shadow rounded font-weight-bold" (click)="zmaz(borrowing.borrowingId!)">ZMAZAŤ</button>
+      </td>
+    </tr>
+    </tbody>
+
   </table>
 
 </div>
