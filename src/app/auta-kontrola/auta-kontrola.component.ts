@@ -1,5 +1,6 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {AutoZoznam} from "../models/auto.model";
+import {formatDate} from "@angular/common";
 
 @Component({
   selector: 'app-auta-kontrola',
@@ -9,6 +10,9 @@ import {AutoZoznam} from "../models/auto.model";
 export class AutaKontrolaComponent{
 
   term!: string;
+
+  date = new Date();
+  cDate = formatDate(this.date, 'yyyy-MM-dd', 'en-US');
 
   @Input()
   auta: AutoZoznam[] = [];

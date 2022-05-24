@@ -7,7 +7,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import {HttpClientModule} from "@angular/common/http";
 import { MenuComponent } from './menu/menu.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { AutaZoznamComponent } from './auta-zoznam/auta-zoznam.component';
+import {AutaZoznamComponent} from './auta-zoznam/auta-zoznam.component';
 import { AutoStrankaComponent } from './auto-stranka/auto-stranka.component';
 import { AutoFormularComponent } from './auto-formular/auto-formular.component';
 import { AutaKontrolaComponent } from './auta-kontrola/auta-kontrola.component';
@@ -48,6 +48,7 @@ import { LogoutComponent } from './logout/logout.component';
 
     FilterCar,
     FilterCustomer
+
   ],
   imports: [
     BrowserModule,

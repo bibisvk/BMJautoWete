@@ -20,9 +20,9 @@
     <tbody>
     <tr *ngFor="let auto of auta | filter:term">
       <td>{{ auto.id }}</td>
-      <td>{{ auto.TKEndDate }}</td>
-      <td>{{ auto.EKEndDate }}</td>
-      <td>{{ auto.PZPEndDate }}</td>
+      <td [style.background]="auto.TKEndDate > cDate? '#28A745': '#dc3545'">{{ auto.TKEndDate }}</td>
+      <td [style.background]="auto.EKEndDate > cDate? '#28A745': '#dc3545'">{{ auto.EKEndDate }}</td>
+      <td [style.background]="auto.PZPEndDate > cDate? '#28A745': '#dc3545'">{{ auto.PZPEndDate }}</td>
       <td>
         <button type = "button" class="btn-danger btn-md shadow rounded font-weight-bold mr-4" (click)="uprav(auto.id!)">UPRAVIŤ</button>
       </td>
