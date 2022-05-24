@@ -1,15 +1,21 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {BorrowingZoznam} from "../models/borrowing.model";
 import { Pipe, PipeTransform } from '@angular/core';
+import {formatDate} from "@angular/common";
 
 @Component({
   selector: 'app-borrowing-zoznam',
   templateUrl: './borrowing-zoznam.component.html',
-  styleUrls: ['./borrowing-zoznam.component.css']
+  styleUrls: ['./borrowing-zoznam.component.css'],
 })
+
+
 export class BorrowingZoznamComponent {
 
   term!: string;
+
+  date = new Date();
+  cDate = formatDate(this.date, 'yyyy-MM-dd', 'en-US');
 
   @Input()
   borrowings: BorrowingZoznam[] = [];
@@ -29,7 +35,6 @@ export class BorrowingZoznamComponent {
   zmaz(borrowingId: number): void {
     this.zmazBorrowing.emit(borrowingId);
   }
-
 }
 
 @Pipe({ name: 'filterCar' })
