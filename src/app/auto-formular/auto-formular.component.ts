@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Auto} from "../models/auto.model";
+import {Auto, AutoZoznam} from "../models/auto.model";
 import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({

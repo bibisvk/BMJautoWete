@@ -28,4 +28,10 @@ export class AutaZoznamComponent {
     this.zmazAuto.emit(autoId);
   }
 
+  p?: Number;
+
+  pocet(): void{
+    this.p = this.auta.length;
+  }
+
 }
