@@ -1,4 +1,4 @@
-import {APP_INITIALIZER, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import {RouterModule} from "@angular/router";
@@ -22,9 +22,7 @@ import {
   FilterCustomer,
 } from './borrowing-zoznam/borrowing-zoznam.component';
 import {Ng2SearchPipeModule} from "ng2-search-filter";
-import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
-import {initializeKeycloak} from './utility/app.init';
-import { LogoutComponent } from './logout/logout.component';
+
 
 @NgModule({
   declarations: [
@@ -44,8 +42,6 @@ import { LogoutComponent } from './logout/logout.component';
     BorrowingStrankaComponent,
     BorrowingZoznamComponent,
 
-    LogoutComponent,
-
     FilterCar,
     FilterCustomer
 
@@ -57,17 +53,9 @@ import { LogoutComponent } from './logout/logout.component';
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
-    KeycloakAngularModule,
     Ng2SearchPipeModule
   ],
-  providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initializeKeycloak,
-      multi: true,
-      deps: [KeycloakService]
-    }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
