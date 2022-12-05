@@ -22,7 +22,7 @@ export class LogoutComponent implements OnInit {
   }
 
   logout(): void{
-    this.keycloakservice.logout('http://localhost:4200/');
+    this.keycloakservice.logout('http://localhost:80/');
   }
   chodSpat(): void {
     this.router.navigate(['']);
